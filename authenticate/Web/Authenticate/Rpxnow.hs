@@ -35,7 +35,8 @@ import Data.Attoparsec.Lazy (parse)
 import qualified Data.Attoparsec.Lazy as AT
 import Data.Text (Text)
 import qualified Data.Aeson.Types
-import qualified Data.HashMap.Lazy as Map
+import qualified Data.Aeson.KeyMap as Map
+import qualified Data.Aeson.Key as Key
 import Control.Applicative ((<$>), (<*>))
 import Control.Exception (throwIO)
 
@@ -97,6 +98,6 @@ parseProfile (Object m) = do
         <*> return (mapMaybe go (Map.toList profile))
   where
     go ("identifier", _) = Nothing
-    go (k, String v) = Just (k, v)
+    go (k, String v) = Just (Key.toText k, v)
     go _ = Nothing
 parseProfile _ = mzero

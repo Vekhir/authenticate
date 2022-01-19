@@ -8,7 +8,7 @@ synopsis:        Authentication methods for Haskell web applications.
 description:     API docs and the README are available at <http://www.stackage.org/package/authenticate>.
 category:        Web
 stability:       Stable
-cabal-version:   >= 1.6
+cabal-version:   >= 1.8
 build-type:      Simple
 homepage:        http://github.com/yesodweb/authenticate
 extra-source-files: README.md ChangeLog.md
@@ -19,7 +19,7 @@ flag network-uri
 
 library
     build-depends:   base                          >= 4.10     && < 5
-                   , aeson                         >= 0.5
+                   , aeson                         >= 2.0      && < 2.1
                    , http-conduit                  >= 1.5
                    , transformers                  >= 0.1
                    , bytestring                    >= 0.9

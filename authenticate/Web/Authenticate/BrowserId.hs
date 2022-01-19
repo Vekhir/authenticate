@@ -9,7 +9,7 @@ import Data.Text (Text)
 import Network.HTTP.Conduit (parseUrlThrow, responseBody, httpLbs, Manager, method, urlEncodedBody)
 import Data.Aeson (json, Value (Object, String))
 import Data.Attoparsec.Lazy (parse, maybeResult)
-import qualified Data.HashMap.Lazy as Map
+import qualified Data.Aeson.KeyMap as Map
 import Data.Text.Encoding (encodeUtf8)
 import Control.Monad.IO.Class (MonadIO, liftIO)
 
