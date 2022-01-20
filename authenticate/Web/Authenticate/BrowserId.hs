@@ -1,5 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE FlexibleContexts #-}
+{-# LANGUAGE CPP #-}
 module Web.Authenticate.BrowserId
     ( browserIdJs
     , checkAssertion
@@ -9,7 +10,11 @@ import Data.Text (Text)
 import Network.HTTP.Conduit (parseUrlThrow, responseBody, httpLbs, Manager, method, urlEncodedBody)
 import Data.Aeson (json, Value (Object, String))
 import Data.Attoparsec.Lazy (parse, maybeResult)
+#if MIN_VERSION_aeson(2,0,0)
 import qualified Data.Aeson.KeyMap as Map
+#else
+import qualified Data.HashMap.Lazy as Map
+#endif
 import Data.Text.Encoding (encodeUtf8)
 import Control.Monad.IO.Class (MonadIO, liftIO)
 
