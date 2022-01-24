@@ -1,5 +1,5 @@
 name:            authenticate
-version:         1.3.5
+version:         1.3.5.1
 license:         MIT
 license-file:    LICENSE
 author:          Michael Snoyman, Hiromi Ishii, Arash Rouhani
@@ -8,7 +8,7 @@ synopsis:        Authentication methods for Haskell web applications.
 description:     API docs and the README are available at <http://www.stackage.org/package/authenticate>.
 category:        Web
 stability:       Stable
-cabal-version:   >= 1.6
+cabal-version:   >= 1.8
 build-type:      Simple
 homepage:        http://github.com/yesodweb/authenticate
 extra-source-files: README.md ChangeLog.md
