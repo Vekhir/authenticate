@@ -1,5 +1,9 @@
 # authenticate changelog
 
+## 1.3.5.1
+
+* Support for aeson-2.0 [#56](https://github.com/yesodweb/authenticate/pull/56)
+
 ## 1.3.5
 
 * Drop tagstream-conduit dep (for GHC 8.8 support)
