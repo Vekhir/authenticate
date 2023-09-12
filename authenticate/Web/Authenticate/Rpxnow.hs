@@ -22,6 +22,9 @@ module Web.Authenticate.Rpxnow
     ) where
 
 import Data.Aeson
+#if MIN_VERSION_aeson(2,2,0)
+import Data.Aeson.Parser (json)
+#endif
 import Network.HTTP.Conduit
 import Control.Monad.IO.Class
 import Data.Maybe
