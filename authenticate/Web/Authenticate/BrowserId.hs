@@ -8,7 +8,12 @@ module Web.Authenticate.BrowserId
 
 import Data.Text (Text)
 import Network.HTTP.Conduit (parseUrlThrow, responseBody, httpLbs, Manager, method, urlEncodedBody)
+#if MIN_VERSION_aeson(2,2,0)
+import Data.Aeson (Value (Object, String))
+import Data.Aeson.Parser (json)
+#else
 import Data.Aeson (json, Value (Object, String))
+#endif
 import Data.Attoparsec.Lazy (parse, maybeResult)
 #if MIN_VERSION_aeson(2,0,0)
 import qualified Data.Aeson.KeyMap as Map
