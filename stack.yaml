@@ -5,5 +5,5 @@ packages:
 - authenticate-oauth/
 
 extra-deps:
-- base64-bytestring-1.2.0.0
+- base64-bytestring-1.2.1.0
 - attoparsec-aeson-2.1.0.0
