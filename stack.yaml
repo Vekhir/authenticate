@@ -6,3 +6,4 @@ packages:
 
 extra-deps:
 - base64-bytestring-1.2.0.0
+- attoparsec-aeson-2.1.0.0
